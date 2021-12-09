@@ -2,14 +2,14 @@
   "development": {
     "username": "postgres",
     "password": "[][]",
-    "database": "express_authentication_development",
+    "database": "miss_monica_database",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "[][]",
-    "database": "express_authentication_test",
+    "database": "miss_monica_database",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

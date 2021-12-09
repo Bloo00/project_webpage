@@ -17,6 +17,10 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      isAdmin: {
+        type: Sequelize.BOOLEAN
+      },
+      // characters: 
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
