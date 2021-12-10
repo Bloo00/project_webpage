@@ -1,0 +1,31 @@
+<form method="POST" action="/character/<%= character.id %>/?_method=PUT"> 
+
+    <label for="title">Title</label>
+    <input type="text" name="title" value="<%= character.title%>">
+  
+    <label for="length">Length</label>
+    <input id="length" type="text" name="length" value="<%= character.length%>">
+
+    <label for="tracks">Tracks</label>
+    <input id="tracks" type="text" name="tracks" value="<%= character.tracks%>">
+
+    <label for="playCount">Play Count</label>
+    <input id="playCount" type="text" name="playCount" value="<%= character.playCount%>">
+
+    <label for="likes">Likes</label>
+    <input id="likes" type="likes" name="likes" value="<%= character.likes%>">
+
+    <label for="year">Year</label>
+    <input id="year" type="text" name="year" value="<%= character.year%>">
+
+    <label for="explicit">Explicit</label>
+    <input id="explicit" type="text" name="explicit" value="<%= character.explicit%>">
+  
+    <input type="submit">
+  </form>
+
+
+
+
+
+    

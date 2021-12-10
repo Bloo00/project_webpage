@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Character.init({
+    name: DataTypes.STRING,
     height: DataTypes.INTEGER,
     weight: DataTypes.INTEGER,
     strength: DataTypes.INTEGER,
