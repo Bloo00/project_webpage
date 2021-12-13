@@ -7,6 +7,18 @@ const session = require('express-session');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 
+const {
+  Character,
+  Schedule,
+  User
+} = require("./models");
+
+// ==== data base stuff ====
+const character = require("./models/characters");
+const schedule = require("./models/schedule");
+const user = require("./models/user");
+const { resourceUsage } = require('process');
+
 const SECRET_SESSION = process.env.SECRET_SESSION;
 console.log(SECRET_SESSION);
 
@@ -46,6 +58,17 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 // controllers
 app.use('/auth', require('./controllers/auth'));
+
+// ==================== schedule controler =========================
+
+app.use('/schedule', require('./controllers/schedule'));
+
+// ===================== character controlers =======================
+
+app.use('/characters', require('./controllers/characters'));
+
+
+
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
