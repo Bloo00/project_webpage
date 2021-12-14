@@ -1,15 +1,24 @@
 <form method="POST" action="/schedule/<%= schedule.id %>/?_method=PUT">
-    <label for="title">Title</label>
-    <input type="text" name="title" value="<%= album.title %>">
+    <label for="monday">Monday</label>
+    <input type="text" name="monday" value="<%= schedule.monday %>">
   
-    <label for="length">Length</label>
-    <input id="length" type="text" name="length" value="<%= album.length %>">
+    <label for="tuesday">Tuesday</label>
+    <input id="tuesday" type="text" name="tuesday" value="<%= schedule.tuesday %>">
 
-    <label for="tracks">Tracks</label>
-    <input id="tracks" type="text" name="tracks" value="<%= album.tracks %>">
+    <label for="wednesday">Wednesday</label>
+    <input id="wednesday" type="text" name="wednesday" value="<%= schedule.wednesday %>">
 
-    <label for="year">Year</label>
-    <input id="year" type="text" name="year" value="<%= album.year %>">
-  
+    <label for="thursday">Thursday</label>
+    <input id="thursday" type="text" name="thursday" value="<%= schedule.thursday %>">
+
+    <label for="friday">Friday</label>
+    <input id="friday" type="text" name="friday" value="<%= schedule.friday %>">
+
+    <label for="saturday">Saturday</label>
+    <input id="saturday" type="text" name="saturday" value="<%= schedule.saturday %>">
+
+    <label for="sunday">Sunday</label>
+    <input id="sunday" type="text" name="sunday" value="<%= schedule.sunday %>">
+
     <input type="submit">
   </form>

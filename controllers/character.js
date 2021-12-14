@@ -10,6 +10,24 @@ const { Character } = require('../models');
 /**
  * GET ROUTES
  * */ 
+
+
+router.get('/kanban', function(req,res) {
+    res.render('characters/kanban', {});
+     // get all Character
+    Character.findAll()
+    .then(function(characterList) {
+        console.log('FOUND ALL characters', characterList);
+        // res.json({ characters: characterList });
+        res.render('characters/kanban', { characters: characterList })
+    })
+    .catch(function(err) {
+        console.log('ERROR', err);
+        res.json({ message: 'could not find any characters....'});
+    });
+});
+
+
 // /characters route
 router.get('/', function(req, res) {
     // get all Character
@@ -17,7 +35,7 @@ router.get('/', function(req, res) {
     .then(function(characterList) {
         console.log('FOUND ALL characters', characterList);
         // res.json({ characters: characterList });
-        res.render('character/index', { characters: characterList })
+        res.render('characters/index', { characters: characterList })
     })
     .catch(function(err) {
         console.log('ERROR', err);
@@ -36,7 +54,7 @@ router.get('/edit/:id', function(req, res) {
     .then(function(character) {
         if (character) {
             character = character.toJSON();
-            res.render('character/edit', { character });
+            res.render('characters/edit', { character });
         } else {
             console.log('This character does not exist');
             // render a 404 page
@@ -126,7 +144,7 @@ router.delete('/:id', function(req, res) {
     Character.destroy({ where: { id: characterIndex } })
     .then(function(response) {
         console.log('Character DELETED', response);
-        res.redirect('/charaters');
+        res.redirect('/characters');
     })
     .catch(function(error) {
         console.log('ERROR', error);

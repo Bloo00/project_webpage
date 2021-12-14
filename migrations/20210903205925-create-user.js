@@ -20,6 +20,9 @@ module.exports = {
       isAdmin: {
         type: Sequelize.BOOLEAN
       },
+      date: {
+        type: Sequelize.INTEGER
+      },
       // characters: 
       createdAt: {
         allowNull: false,

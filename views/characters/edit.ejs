@@ -1,0 +1,36 @@
+<form method="POST" action="/character/<%= character.id %>/?_method=PUT"> 
+
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= character.name%>">
+  
+    <label for="height">Height</label>
+    <input id="height" type="text" name="height" value="<%= character.height%>">
+
+    <label for="weight">Weight</label>
+    <input id="weight" type="text" name="weight" value="<%= character.weight%>">
+
+    <label for="strength">strength</label>
+    <input id="strength" type="text" name="strength" value="<%= character.strength%>">
+
+    <label for="constitution">constitution</label>
+    <input id="constitution" type="constitution" name="constitution" value="<%= character.constitution%>">
+
+    <label for="wisdom">wisdom</label>
+    <input id="wisdom" type="text" name="wisdom" value="<%= character.wisdom%>">
+
+    <label for="intelligence">intelligence</label>
+    <input id="intelligence" type="text" name="intelligence" value="<%= character.intelligence%>">
+
+    <label for="charisma">charisma</label>
+    <input id="charisma" type="text" name="charisma" value="<%= character.charisma%>">
+
+    <label for="race">race</label>
+    <input id="race" type="text" name="race" value="<%= character.race%>">
+
+    <label for="class">class</label>
+    <input id="class" type="text" name="class" value="<%= character.class%>">
+  
+    <input type="submit">
+  </form>
+
+

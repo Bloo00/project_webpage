@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <a href="/character">View All characters</a>
+  <a href="/characters">View All characters</a>
   <h1>
     <%= character.name %>
   </h1>
@@ -43,9 +43,9 @@
   <h2>
     <%= character.class  %> 
   </h2>
-  <a href="/character/edit/<%= character.id %>">Edit</a>
+  <a href="/characters/edit/<%= character.id %>">Edit</a>
 
-  <form method="POST" action="/character/<%= character.id %>/?_method=DELETE">
+  <form method="POST" action="/characters/<%= character.id %>/?_method=DELETE">
     <input type="submit" value="Delete Character">
   </form>
 </body>
