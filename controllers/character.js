@@ -66,11 +66,12 @@ router.get('/edit/:id', function(req, res) {
     
 })
 
+// =============== gets the show ==========
 
 router.get('/:id', function(req, res) {
     console.log('PARAMS', req.params);
     let characterIndex = Number(req.params.id);
-    console.log('IS THIS A NUMBER?', characterIndex);
+    // console.log('IS THIS A NUMBER?', characterIndex);
     Character.findByPk(characterIndex)
     .then(function(character) {
         if (character) {
@@ -91,14 +92,14 @@ router.get('/:id', function(req, res) {
 /**
  * POST ROUTES
  * */ 
-
+// ============ new post should be ==========
 router.post('/', function(req, res) {
     console.log('SUBMITTED FORM', req.body);
     Character.create({
-        title: req.body.title,
-        length: Number(req.body.length),
-        tracks: Number(req.body.tracks),
-        year: Number(req.body.year)
+        // title: req.body.title,
+        // length: Number(req.body.length),
+        // tracks: Number(req.body.tracks),
+        // year: Number(req.body.year)
     })
     .then(function(newCharacter) {
         // console.log('NEW Character', newCharacter.toJSON());

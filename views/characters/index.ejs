@@ -3,24 +3,91 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All characters</title>
-    <link rel="stylesheet" href="/css/characters.css">
-
-
+    <title>Characters</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <!-- Bulma Version 0.9.0-->
+    <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+    <link rel="stylesheet" href="../css/kanban.css">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <% for( let index=0; index < characters.length; index++ ) { %>
-        <% let a=characters[index]; %>
-            <% a=a.toJSON() %>
-                <p>
-                    <%= a.name %>
-                </p>
-                <a href="/characters/<%= a.id %>">View character</a>
-                <hr>
-                <% } %>
+    <nav class="navbar has-shadow">
+        <div class="container">
+            <div class="navbar-brand"><a class="navbar-item" href="../"><img src="http://bulma.io/images/bulma-logo.png"
+                        alt="Bulma: a modern CSS framework based on Flexbox" /></a>
+                <div class="navbar-burger burger" data-target="navMenu"><span></span><span></span><span></span></div>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Account</a>
+                        <div class="navbar-dropdown"><a class="navbar-item">Dashboard</a><a
+                                class="navbar-item">Profile</a><a class="navbar-item">Settings</a>
+                            <hr class="navbar-divider" />
+                            <div class="navbar-item">Logout</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+
+            </div>
+        </div>
+    </section>
+    <div class="box cta">
+        <div class="columns is-mobile is-centered">
+            <div class="field is-grouped is-grouped-multiline">
+            
+            </div>
+        </div>
+    </div>
+    <section class="container">
+        <div class="level-item">
+            <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+                <div class="column is-narrow">
+                    <article class="message is-black">
+                        <div class="message-header">
+                            <p>Your Characters</p>
+                        </div>
+                        <div class="message-body">
+                            <% for( let index=0; index < characters.length; index++ ) { %>
+                                <% let a=characters[index]; %>
+                                    <% a=a.toJSON() %>
+                                    <div class="board-item">
+                                        <div class="board-item-content"><span><%= a.name %></span></div>
+                                        <a href="/characters/<%= a.id %>">View character</a>
+                                    </div>
+                                        <% } %>
+                                            
+                        </div>
+                    </article>
+                </div>
+                
+                
+                
+
+            </div>
+        </div>
+    </section>
+    <div class="columns is-mobile is-centered">
+        <div class="column is-half is-narrow"></div>
+    </div>
+    <footer>
+        <div class="box cta">
+            <div class="columns is-mobile is-centered">
+                <div class="field is-grouped is-grouped-multiline">
+                    <div class="control">
+                    <div class="control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bulma.js"></script>
 </body>
 
 </html>
