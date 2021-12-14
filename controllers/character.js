@@ -13,7 +13,6 @@ const { Character } = require('../models');
 
 
 router.get('/kanban', function(req,res) {
-    res.render('characters/kanban', {});
      // get all Character
     Character.findAll()
     .then(function(characterList) {
