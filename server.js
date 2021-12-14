@@ -47,7 +47,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('users/index');
 })
 
 // Add this above /auth controllers
@@ -61,18 +61,18 @@ app.use('/auth', require('./controllers/auth'));
 
 // ==================== schedule controler =========================
 
-app.use('/schedule', require('./controllers/schedule'));
+app.use('/schedules', require('./controllers/schedule'));
 
 // ===================== character controlers =======================
 
-app.use('/characters', require('./controllers/characters'));
+app.use('/characters', require('./controllers/character'));
 
 
 
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-  console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
+  console.log(`your doing something port ${PORT}`);
 });
 
 module.exports = server;
