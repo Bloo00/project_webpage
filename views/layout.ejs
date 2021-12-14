@@ -11,11 +11,11 @@
     <%- include('partials/alerts') %>
 
     <% if (!currentUser) { %>
-      <li><a href="/auth/signup">Signup</a></li>
-      <li><a href="/auth/login">Login</a></li>
+      <li style="display: none"><a href="/auth/signup">Signup</a></li>
+      <li style="display: none"><a href="/auth/login">Login</a></li>
   <% } else { %>
-      <li><a href="/auth/logout">Logout</a></li>
-      <li><a href="/profile">Profile</a></li>
+      <li style="display: none"><a href="/auth/logout">Logout</a></li>
+      <li style="display: none"><a href="/profile">Profile</a></li>
   <% } %>
   
     <%- body %> 

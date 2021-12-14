@@ -41,53 +41,68 @@
     <div class="box cta">
         <div class="columns is-mobile is-centered">
             <div class="field is-grouped is-grouped-multiline">
-            
-            </div>
-        </div>
-    </div>
-    <section class="container">
-        <div class="level-item">
-            <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
-                <div class="column is-narrow">
-                    <article class="message is-black">
-                        <div class="message-header">
-                            <p>Your Characters</p>
-                        </div>
-                        <div class="message-body">
-                            <% for( let index=0; index < characters.length; index++ ) { %>
-                                <% let a=characters[index]; %>
-                                    <% a=a.toJSON() %>
-                                    <div class="board-item">
-                                        <div class="board-item-content"><span><%= a.name %></span></div>
-                                        <a href="/characters/<%= a.id %>">View character</a>
-                                    </div>
-                                        <% } %>
-                                            
-                        </div>
-                    </article>
-                </div>
-                
-                
-                
 
             </div>
         </div>
-    </section>
-    <div class="columns is-mobile is-centered">
-        <div class="column is-half is-narrow"></div>
     </div>
-    <footer>
-        <div class="box cta">
-            <div class="columns is-mobile is-centered">
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                    <div class="control">
+
+
+    <% for( let index=0; index < characters.length; index++ ) { %>
+        <% let a=characters[index]; %>
+            <% a=a.toJSON() %>
+                <section class="container">
+                    <div class="level-item">
+                        <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+                            <div class="column is-narrow">
+                                <article class="message is-black">
+                                    <div class="message-body">
+                                        <div class="message-header">
+                                            <p>
+                                                <%= a.name %>
+                                            </p>
+                                        </div>
+                                        <div class="board-item">
+                                            <div class="board-item-content">Image place holder</a></span></div>
+                                        </div>
+                                        <div class="board-item">
+                                            <div class="board-item-content"><a href="/characters/<%= a.id %>">View
+                                                    character</a></span></div>
+                                        </div>
+                                        <div class="board-item">
+                                            <div class="board-item-content"><a href="/characters/edit/<%= a.id %>">Edit
+                                                    character</a></span></div>
+                                        </div>
+                                        <!-- not working -->
+                                        <div class="board-item">
+                                            <div class="board-item-content"><a
+                                                    href="/characters/show/<%= a.id %>">Delete character</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="../js/bulma.js"></script>
+                </section>
+                <% } %>
+
+                    <div class="columns is-mobile is-centered">
+                        <div class="column is-half is-narrow"></div>
+                    </div>
+                    <footer>
+                        <div class="box cta">
+                            <div class="columns is-mobile is-centered">
+                                <div class="field is-grouped is-grouped-multiline">
+                                    <div class="control">
+                                        <div class="control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </footer>
+                    <script src="../js/bulma.js"></script>
 </body>
 
 </html>
